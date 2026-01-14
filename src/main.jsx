@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 
-import { ThemeProvider } from "./context/ThemeContext.jsx/index.jsx";
+import { ThemeProvider } from "./context/ThemeContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
 import App from "./App.jsx";
