@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-
 import { useMemo } from "react";
 
 import { TopicContentRenderer } from "../TopicContentRenderer";

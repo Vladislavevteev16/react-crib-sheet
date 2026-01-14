@@ -10,14 +10,14 @@ import style from "./index.module.css";
 
 export const TopicsPage = () => {
   const { theme } = useThemeContext();
+  const { pathname } = useLocation();
   const mainContentRef = useRef(null);
-  const location = useLocation();
 
   useEffect(() => {
     if (mainContentRef.current) {
       mainContentRef.current.scrollTop = 0;
     }
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <div className={style.topicContainer}>
@@ -31,4 +31,3 @@ export const TopicsPage = () => {
     </div>
   );
 };
-

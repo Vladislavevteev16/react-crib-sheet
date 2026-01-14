@@ -13,7 +13,7 @@ const SYNTAX_HIGHLIGHTER_STYLES = {
     borderRadius: "6px",
     padding: "12px 16px",
     margin: 0,
-    background: "#1F1F1F",
+    background: "#16181D",
     overflowX: "auto",
     tabSize: 2,
     maxWidth: "calc(100vw - 32px)",

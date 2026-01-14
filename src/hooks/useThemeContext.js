@@ -5,7 +5,7 @@ export const useThemeContext = () => {
   const context = useContext(ThemeContext);
 
   if (!context) {
-    console.error("Need to wrap it in the provider");
+    console.error("Component must be wrapped with Provider");
   }
 
   return context;

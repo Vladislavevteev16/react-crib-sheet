@@ -1,7 +1,7 @@
 import { useThemeContext } from "../../hooks/useThemeContext";
 
-import moon from "../../assets/moon.png";
-import sun from "../../assets/sun.png";
+import dark from "../../assets/moon.png";
+import light from "../../assets/sun.png";
 
 import style from "./index.module.css";
 
@@ -11,7 +11,7 @@ export const ToggleTheme = () => {
   return (
     <>
       <button onClick={handleChangeTheme} className={style.toogleContainer}>
-        <img src={theme === "dark" ? sun : moon} alt={"toggleTheme"} />
+        <img src={theme === "dark" ? light : dark} alt={"toggleTheme"} />
       </button>
     </>
   );

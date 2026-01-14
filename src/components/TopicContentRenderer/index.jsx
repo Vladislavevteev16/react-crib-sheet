@@ -2,9 +2,7 @@ import { CodeBlockWrapper } from "../CodeBlockWrapper";
 
 import style from "./index.module.css";
 
-
 export const TopicContentRenderer = ({ currentTopic }) => {
-  
   return (
     <>
       {currentTopic.description.map(({ type, content, items }, index) => {
@@ -12,7 +10,7 @@ export const TopicContentRenderer = ({ currentTopic }) => {
           case "paragraph":
             return <p key={`paragraph-${index}`}>{content}</p>;
           case "code":
-            return <CodeBlockWrapper content={content} />;
+            return <CodeBlockWrapper key={`code-${index}`} content={content} />;
           case "list":
             return (
               <ul key={`list-${index}`} className={style.list}>

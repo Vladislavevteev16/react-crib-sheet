@@ -1,0 +1,25 @@
+.button {
+  padding: 15px 29px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #58c4dc;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.dark {
+  background: #58c4dc;
+  color: #404756;
+}
+
+.light {
+  background: #087ea4;
+  color: #fff;
+}

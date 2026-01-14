@@ -6,7 +6,6 @@ import svg from "../../assets/react.svg";
 import style from "./index.module.css";
 
 export const Header = () => {
-  console.log("Header re-render");
 
   return (
     <header className={style.headerContainer}>
