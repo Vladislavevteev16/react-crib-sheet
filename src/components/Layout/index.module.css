@@ -1,0 +1,15 @@
+.layoutContainer {
+  width: 100%;
+  position: fixed;
+}
+
+.light {
+  background-color: #fff;
+  color: #23272f;
+}
+
+.dark {
+  background-color: #23272f;
+  color: #fff;
+}
+

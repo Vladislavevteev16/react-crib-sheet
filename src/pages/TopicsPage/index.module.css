@@ -1,0 +1,18 @@
+.topicContainer {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.mainContent {
+  overflow-y: auto;
+  height: 91vh;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
+}

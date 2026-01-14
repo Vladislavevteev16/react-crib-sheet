@@ -1,0 +1,24 @@
+.topicContentContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.topicContentContainer p {
+  font-size: 1.2em;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.topicContentContainer ul {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.topicContentContainer li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+

@@ -1,0 +1,25 @@
+.toogleContainer {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s ease;
+}
+
+.toogleContainer img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.toogleContainer:hover {
+  transition: 0.1s ease;
+  border: 1px solid rgb(63, 63, 46);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 30px rgba(255, 215, 0, 0.2);
+}
+

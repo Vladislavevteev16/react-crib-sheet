@@ -1,0 +1,6 @@
+.codeBlockContainer {
+  background: #1f1f1f;
+  border-radius: 6px;
+  max-width: calc(100vw - 32px);
+  overflow: hidden;
+}
