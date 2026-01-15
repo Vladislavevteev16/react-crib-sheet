@@ -13,7 +13,7 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-crib-sheet">
         <ErrorBoundary>
           <App />
         </ErrorBoundary>
