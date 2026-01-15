@@ -12,7 +12,7 @@ export const TopicsPage = () => {
   const { theme } = useThemeContext();
   const { pathname } = useLocation();
   const mainContentRef = useRef(null);
-
+ 
   useEffect(() => {
     if (mainContentRef.current) {
       mainContentRef.current.scrollTop = 0;

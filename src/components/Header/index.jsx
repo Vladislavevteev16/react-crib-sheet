@@ -1,4 +1,4 @@
-import { ToggleTheme } from "../../ui/ToggleTheme";
+import { ToggleTheme } from "../ToggleTheme";
 import { Link } from "react-router";
 
 import svg from "../../assets/react.svg";
@@ -6,7 +6,6 @@ import svg from "../../assets/react.svg";
 import style from "./index.module.css";
 
 export const Header = () => {
-
   return (
     <header className={style.headerContainer}>
       <Link to="/">

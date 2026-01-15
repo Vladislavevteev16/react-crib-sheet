@@ -1,8 +1,14 @@
-import { Button } from "../../ui/Button";
+import { NavigateButton } from "../../components/NavigateButton";
+
+import { useNavigate } from "react-router";
 
 import style from "./index.module.css";
 
 export const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => navigate("topics/components");
+
   return (
     <div className={style.homePageContainer}>
       <h1>
@@ -19,7 +25,7 @@ export const HomePage = () => {
           React.dev
         </a>
       </p>
-      <Button path={"./topics"}>Перейти к темам</Button>
+      <NavigateButton onClick={handleNavigate}>Перейти к темам</NavigateButton>
     </div>
   );
 };

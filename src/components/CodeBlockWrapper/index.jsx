@@ -1,6 +1,13 @@
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/prism/javascript";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  coldarkCold,
+  coldarkDark,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+
+import { useThemeContext } from "../../hooks/useThemeContext";
+
+import { useMemo } from "react";
 
 import style from "./index.module.css";
 
@@ -8,12 +15,11 @@ SyntaxHighlighter.registerLanguage("javascript", js);
 
 const SYNTAX_HIGHLIGHTER_STYLES = {
   codeBlock: {
-    fontSize: "14px",
-    lineHeight: 1.4,
+    fontSize: "0.78em",
+    lineHeight: 1.2,
     borderRadius: "6px",
     padding: "12px 16px",
     margin: 0,
-    background: "#16181D",
     overflowX: "auto",
     tabSize: 2,
     maxWidth: "calc(100vw - 32px)",
@@ -31,17 +37,29 @@ const SYNTAX_HIGHLIGHTER_STYLES = {
 };
 
 export const CodeBlockWrapper = ({ content }) => {
+  const { theme } = useThemeContext();
+
+  const styleTheme = useMemo(
+    () => (theme === "dark" ? coldarkDark : coldarkCold),
+    [theme]
+  );
+
+  const syntaxHighlighterProps = useMemo(
+    () => ({
+      language: "javascript",
+      style: styleTheme,
+      showLineNumbers: true,
+      lineNumberStyle: SYNTAX_HIGHLIGHTER_STYLES.lineNumbers,
+      customStyle: SYNTAX_HIGHLIGHTER_STYLES.codeBlock,
+      wrapLines: false,
+      lineProps: SYNTAX_HIGHLIGHTER_STYLES.line,
+    }),
+    [styleTheme]
+  );
+
   return (
     <div className={style.codeBlockContainer}>
-      <SyntaxHighlighter
-        language="javascript"
-        style={atomDark}
-        showLineNumbers={true}
-        lineNumberStyle={SYNTAX_HIGHLIGHTER_STYLES.lineNumbers}
-        customStyle={SYNTAX_HIGHLIGHTER_STYLES.codeBlock}
-        wrapLines={false}
-        lineProps={SYNTAX_HIGHLIGHTER_STYLES.line}
-      >
+      <SyntaxHighlighter {...syntaxHighlighterProps}>
         {content}
       </SyntaxHighlighter>
     </div>

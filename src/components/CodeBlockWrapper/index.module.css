@@ -1,6 +1,9 @@
 .codeBlockContainer {
   background: #1f1f1f;
-  border-radius: 6px;
+  border-radius: 30px;
   max-width: calc(100vw - 32px);
   overflow: hidden;
+  border: 2px solid #56C0D8;
 }
+
+
