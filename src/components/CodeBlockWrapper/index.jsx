@@ -39,22 +39,17 @@ const SYNTAX_HIGHLIGHTER_STYLES = {
 export const CodeBlockWrapper = ({ content }) => {
   const { theme } = useThemeContext();
 
-  const styleTheme = useMemo(
-    () => (theme === "dark" ? coldarkDark : coldarkCold),
-    [theme]
-  );
-
   const syntaxHighlighterProps = useMemo(
     () => ({
       language: "javascript",
-      style: styleTheme,
+      style: theme === "dark" ? coldarkDark : coldarkCold,
       showLineNumbers: true,
       lineNumberStyle: SYNTAX_HIGHLIGHTER_STYLES.lineNumbers,
       customStyle: SYNTAX_HIGHLIGHTER_STYLES.codeBlock,
       wrapLines: false,
       lineProps: SYNTAX_HIGHLIGHTER_STYLES.line,
     }),
-    [styleTheme]
+    [theme]
   );
 
   return (
