@@ -6,6 +6,27 @@
   position: relative;
 }
 
+@media (max-width: 990px) {
+  .topicContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (min-width: 2000px) {
+  .topicContainer {
+    display: grid;
+    grid-template-columns: 15% 75%;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+}
+
 .mainContent {
   overflow-y: auto;
   height: 91vh;
@@ -13,6 +34,27 @@
   scroll-behavior: smooth;
 }
 
+@media (max-width: 990px) {
+  .mainContent {
+    height: 91%;
+    min-height: 0;
+  }
+}
+
 .dark {
   scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
+}
+
+.mainContent::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mainContent.dark::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
+
+.mainContent:not(.dark)::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }

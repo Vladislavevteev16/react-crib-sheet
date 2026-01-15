@@ -10,6 +10,11 @@
 
 .homePageContainer h1 {
   font-size: 3rem;
+  text-align: center;
+}
+
+.homePageContainer p {
+  text-align: center;
 }
 
 .homePageContainer span {
@@ -55,3 +60,4 @@
   background: #087ea4;
   color: #fff;
 }
+

@@ -11,6 +11,24 @@
   scrollbar-width: thin;
 }
 
+@media (max-width: 990px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: auto;
+    min-height: 70px;
+    max-height: 15vh;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 15px;
+    z-index: 100;
+  }
+}
+
 .sidebar.darkTheme {
   scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
 }
@@ -24,8 +42,24 @@
   gap: 9px;
 }
 
+@media (max-width: 990px) {
+  .sidebar ul {
+    flex-direction: row !important;
+    padding: 0 !important;
+    gap: 10px !important;
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
 .sidebar ul li {
   width: 100%;
+}
+
+@media (max-width: 990px) {
+  .sidebar ul li {
+    width: auto !important;
+  }
 }
 
 .link {
@@ -41,6 +75,19 @@
 
 .link:hover {
   transform: translateX(5px);
+}
+
+@media (max-width: 990px) {
+  .link,
+  .activeLink {
+    padding: 12px 15px !important;
+    font-size: 16px !important;
+    white-space: nowrap;
+  }
+
+  .link:hover {
+    transform: none !important;
+  }
 }
 
 .activeLink {
@@ -96,6 +143,7 @@
 .sidebar::-webkit-scrollbar {
   width: 12px;
 }
+
 .sidebar.lightTheme::-webkit-scrollbar-thumb {
   background: linear-gradient(
     to bottom,
@@ -136,4 +184,11 @@
     rgba(255, 255, 255, 0.8) 80%,
     rgba(255, 255, 255, 0.2)
   );
+}
+
+@media (max-width: 990px) {
+  .sidebar::-webkit-scrollbar {
+    height: 6px;
+    width: auto;
+  }
 }
