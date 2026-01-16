@@ -18,7 +18,7 @@ const SYNTAX_HIGHLIGHTER_STYLES = {
     fontSize: "0.78em",
     lineHeight: 1.2,
     borderRadius: "6px",
-    padding: "12px 16px",
+    padding: "12px 1px",
     margin: 0,
     overflowX: "auto",
     tabSize: 2,
@@ -28,7 +28,7 @@ const SYNTAX_HIGHLIGHTER_STYLES = {
     color: "#5a5a5a",
     paddingRight: "12px",
     userSelect: "none",
-    minWidth: "40px",
+    minWidth: "24px",
   },
   line: {
     whiteSpace: "pre",

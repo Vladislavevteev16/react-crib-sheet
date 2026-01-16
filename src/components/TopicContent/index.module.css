@@ -6,6 +6,16 @@
   line-height: 1.6;
 }
 
+@media (max-width: 990px) {
+  .topicContentContainer {
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1rem;
+    line-height: 1.6;
+  }
+}
+
 .topicContentContainer p {
   font-size: 1.2em;
   margin-bottom: 16px;
@@ -21,4 +31,3 @@
   margin-bottom: 8px;
   line-height: 1.5;
 }
-
