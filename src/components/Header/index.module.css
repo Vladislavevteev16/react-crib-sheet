@@ -11,7 +11,7 @@
 }
 
 .logo {
-  width: 45px;
+  max-width: 35px;
   transition: transform 1s ease;
 }
 
